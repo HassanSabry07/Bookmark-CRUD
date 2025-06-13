@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /* عشان ميزودش مساحه بسبب الpadding */
+}
+
+body{
+    background-color: #F7ECDE;    
+}
+
+/* bookmark-header styling */
+
+.bookmark-header h1{
+    font-size: 50px;
+    font-weight: 500;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    position: relative;
+    text-align: center;
+
+}
+
+
+.bookmark-header h1::before{
+    content: "";
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 0;
+    background-color: #FEC260;
+    position: absolute;
+    z-index: -1;
+    transition: all 1s;
+    box-sizing: content-box;
+
+}
+
+
+
+.bookmark-header h1:hover::before{
+    height: 70%;
+}
+
+
+
+/* bookmark-body styling */
+.bookmark-body {
+    border-width: 2px 0 2px 0;
+    border-style: dotted;
+    border-color: #352e28;
+}
+
+
+.bookmark-body h2 {
+    font-family: "Righteous", cursive;
+    font-weight: 500;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-control:focus {
+        border-color:#d99c39;
+        box-shadow: 0 0 0 .25rem #fec26055;
+}
+
+
+
+
+.circles span{
+    width:20px;
+    height:20px;
+    display: block;
+}
+
+
+#alertBox{
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
