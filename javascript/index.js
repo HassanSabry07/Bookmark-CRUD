@@ -45,6 +45,13 @@ function addBookmark() {
 function displayBookmark(arr) {
   var cartoona = "";
 
+  //check if the array is empty
+  if (arr.length === 0) {
+ 
+    BookmarkTable.innerHTML = cartoona;
+  }
+  //loop through the array and create table rows
+  else{
   for (var i = 0; i < arr.length; i++) {
     cartoona += `<tr>
               <th scope="row">${i + 1}</th>
@@ -60,8 +67,8 @@ function displayBookmark(arr) {
                 </button>
               </td>
             </tr>`;
-
-    BookmarkTable.innerHTML = cartoona;
+      BookmarkTable.innerHTML = cartoona;
+  }
   }
 }
 
@@ -75,6 +82,8 @@ function clearInputs() {
 //function to visit websit and add https in case of live server
 function visitWebsite(index) {
   var userURL = BookmarkArr[index].site;
+
+  //i add https:// for the live server because some sites may not work without it
   var httpsRegex = /^https?:\/\//g;
   // Check if the URL starts with http:// or https://
   if (!httpsRegex.test(userURL)) {
